@@ -8,9 +8,9 @@ app.use(express.static('public'));
 
 //Config MySQL DMBS
 const connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'mguijarro',
-    password : 'mguijarro',
+    host : process.env.DB_HOST,
+    user : process.env.DB_username,
+    password : process.env.DB_password,
     database : 'quotes_db'
 });
 
